@@ -1,0 +1,16 @@
+{
+    "spreads": [
+        {
+            "title": "one",
+            "animation": "fadeOut"
+        },
+        {
+            "title": "two",
+            "animation": "fadeOut"
+        },
+        {
+            "title": "three",
+            "animation": "fadeOut"
+        }
+    ]
+}
