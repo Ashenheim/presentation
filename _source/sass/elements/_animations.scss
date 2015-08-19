@@ -3,20 +3,22 @@
 ==================================== */
 
 .main-content {
-    position: relative
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 [ui-view] {
 
-    // &.ng-enter,
-    // &.ng-leave {
+    &.ng-enter,
+    &.ng-leave {
         transition: all 500ms ease-in;
         position: absolute;
-        left: 0; right: 0; top: 0;
-    // }
+        left: 0; right: 0;
+    }
 
-    &.ng-enter        { opacity: 0; }
-    &.ng-enter-active { opacity: 1; }
-    &.ng-leave        { opacity: 1; }
-    &.ng-leave-active { opacity: 0; }
+    &.ng-enter        { transform: translateX(-100%); }
+    &.ng-enter-active { transform: translateX(0); }
+    &.ng-leave        { transform: translateX(0); }
+    &.ng-leave-active { transform: translateX(100%); }
 }

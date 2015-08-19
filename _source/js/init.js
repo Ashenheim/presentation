@@ -1,10 +1,11 @@
 (function() {
 
     angular
-        .module('myApp', ['ui.router', 'ngAnimate'])
+        .module('myApp', ['ui.router', 'ngSanitize', 'ngAnimate'])
         .config(routes)
         .controller('mainCtrl', mainController)
-        .controller('spreadCtrl', spreadCtrl);
+        .controller('spreadCtrl', spreadCtrl)
+        .factory('$markdown', markdownFtry);
 
     function fetchData() {
         var initInjector = angular.injector(["ng"]);
