@@ -9,8 +9,6 @@ function spreadCtrl($scope, $stateParams, $markdown, $http) {
         return $node.title == $stateParams.title;
     })[0];
 
-    console.log("$object = " + JSON.stringify($object));
-    console.log("$node   = " + JSON.stringify($node));
 
     /* ------------------------------------
         Variable generations

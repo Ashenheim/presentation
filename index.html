@@ -11,11 +11,13 @@
 <body ng-controller="mainCtrl">
 
     <div class="site-wrap">
-        <ul>
-            <li ng-repeat="spread in spreads">
-                <a ui-sref="spreads({ title: spread.title })" ng-bind="spread.title"></a>
-            </li>
-        </ul>
+        <section class="navigation">
+            <ul>
+                <li ng-repeat="spread in spreads">
+                    <a ui-sref="spreads({ title: spread.title })" ui-sref-active="active" ng-bind="spread.title"></a>
+                </li>
+            </ul>
+        </section>
 
         <main id="main" class="main-content">
             <div id="primary" class="site-content" ui-view></div>

@@ -1,0 +1,25 @@
+/* ====================================
+    Navigation styling
+==================================== */
+
+.navigation {
+    @include position( fixed, 0px null null 0px );
+    width: 100%;
+    z-index: 9;
+    background: rgba($black, .8);
+    color: $white;
+
+    ul { margin: 0; padding: 0; }
+    li { margin: 0; list-style-type: none; display: inline-block; }
+
+
+    a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: currentcolor;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        
+        &.active { border-color: $c-main; }
+    }
+}
